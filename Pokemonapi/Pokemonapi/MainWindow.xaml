@@ -10,7 +10,7 @@
         <ListBox x:Name="lstnames" HorizontalAlignment="Left" Height="184" Margin="43,101,0,0" VerticalAlignment="Top" Width="209"/>
         <Button x:Name="Btnallpokemon" Content="Find all pokemon" HorizontalAlignment="Left" Margin="422,39,0,0" VerticalAlignment="Top" Width="139" Height="58" Click="Btnallpokemon_Click"/>
         <Button x:Name="BtnAbility" Content="Find ability" HorizontalAlignment="Left" Margin="422,292,0,0" VerticalAlignment="Top" Width="133" Height="65" Click="BtnAbility_Click"/>
-        <TextBox x:Name="Txtabilities" HorizontalAlignment="Left" Height="48" Margin="385,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" FontSize="20"/>
+        <TextBlock x:Name="txtblock" HorizontalAlignment="Left" Margin="422,159,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="126" Width="197"/>
 
     </Grid>
 </Window>

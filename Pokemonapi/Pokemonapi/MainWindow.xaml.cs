@@ -49,14 +49,16 @@ namespace Pokemonapi
 
         private void BtnAbility_Click(object sender, RoutedEventArgs e)
         {
-            string url = @"https://pokeapi.co/api/v2/ability?offset=0&limit=293";
-
+            //string url = @"https://pokeapi.co/api/v2/pokemon/pikachu";
+            var selecteditem = ((Result)lstnames.SelectedItem);
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = client.GetAsync(url).Result;
+                HttpResponseMessage response = client.GetAsync(selecteditem.url).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     var content = response.Content.ReadAsStringAsync().Result;
+                    var stuff = JsonConvert.DeserializeObject<Pokespecs>(content);
+                    txtblock.Text = stuff.ToString();
                    
                 }
             }
